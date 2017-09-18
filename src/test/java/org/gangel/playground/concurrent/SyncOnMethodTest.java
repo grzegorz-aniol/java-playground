@@ -15,6 +15,10 @@ import java.util.stream.IntStream;
  */
 public class SyncOnMethodTest {
 
+    /**
+     * Simple non-static counter
+     *
+     */
     public static class Data {
         
         private volatile int counter = 0; 
@@ -32,7 +36,10 @@ public class SyncOnMethodTest {
         }
     }
         
-   public static class StaticData {
+    /**
+    *   Simple counter using static synchronization
+    */
+    public static class StaticData {
        
         private static volatile int staticCounter = 0;
         
@@ -76,6 +83,8 @@ public class SyncOnMethodTest {
             assert(objects[i].getCounter() == 1);            
         }
         
+        // all threads should finish the work in parallel
+        // cause 'synchronized' is on each object instance
         assert(time >= 1000 && time < 2000);
         
     }
@@ -100,6 +109,9 @@ public class SyncOnMethodTest {
         long time = System.currentTimeMillis() - startTime; 
         
         assert(StaticData.getStaticCount() == NUM_THREADS);
+        
+        // all threads should finish the work sequentially
+        // cause 'synchronized' is on on the class
         assert(time >= 1000 * NUM_THREADS && time < 1000 * (NUM_THREADS + 1));        
     }    
     
