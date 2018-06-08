@@ -29,7 +29,7 @@
 	</dependencies>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<javac.target>1.8</javac.target>
+		<javac.target>9</javac.target>
 		<jmh.version>1.17.3</jmh.version>
 		<uberjar.name>benchmarks</uberjar.name>
 	</properties>
