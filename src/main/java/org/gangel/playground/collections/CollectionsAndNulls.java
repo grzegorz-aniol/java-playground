@@ -34,28 +34,28 @@ public class CollectionsAndNulls {
             System.out.println("addNullKeyToHashMap");
             addNullKeyToHashMap();
         } catch (Throwable e) { 
-            System.err.println(e.getMessage());
+            System.err.println("Error addNullKeyToHashMap:" + e.getMessage());
         }
         
         try {
             System.out.println("addNullValueToHashMap");
             addNullValueToHashMap();
         } catch (Throwable e) { 
-            System.err.println(e.getMessage());
+            System.err.println("Error addNullValueToHashMap:" + e.getMessage());
         }
         
         try {
             System.out.println("addNullKeyToTreeMap");
             addNullKeyToTreeMap();
         } catch (Throwable e) { 
-            System.err.println(e.getMessage());
+            System.err.println("Error addNullKeyToTreeMap:" + e.getMessage());
         }
         
         try {
             System.out.println("addNullValueToTreeMap");
             addNullValueToTreeMap();
         } catch (Throwable e) { 
-            System.err.println(e.getMessage());
+            System.err.println("Error addNullValueToTreeMap:" + e.getMessage());
         }        
         
         System.out.println("Done.");

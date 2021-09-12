@@ -1,5 +1,6 @@
-package org.gangel.playground.performance;
+package org.gangel.playground.identifiers;
 
+import org.gangel.playground.performance.IdGenerator;
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.BenchmarkMode;
 import org.openjdk.jmh.annotations.Measurement;
@@ -25,13 +26,13 @@ public class IdGeneratorPerfTest {
     }
     
     @Benchmark
-    public void testFullUUIDKey(Blackhole bh ) {
+    public void testFullUUIDKey(Blackhole bh) {
         String key = IdGenerator.getNewId();
         bh.consume(key);
     }
     
     @Benchmark
-    public void testShortedUUIDKey(Blackhole bh ) {
+    public void testShortedUUIDKey(Blackhole bh) {
         String key = IdGenerator.getNewId(12);
         bh.consume(key);
     }
