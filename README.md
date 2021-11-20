@@ -6,13 +6,15 @@ Project with personal tests on different Java aspect (e.g. performance, design p
 
 #### Unique ID generation 
 
-**Run complete. Total time: 00:02:14**
+**Run complete. Total time: 00:01:53**
 
 ```
-Benchmark                               Mode  Cnt    Score    Error  Units
-IdGeneratorPerfTest.testFullUUIDKey     avgt   20  746,844 ? 19,603  ns/op
-IdGeneratorPerfTest.testRandomId        avgt   20   26,835 ?  0,418  ns/op
-IdGeneratorPerfTest.testShortedUUIDKey  avgt   20  747,583 ? 10,945  ns/op
+Benchmark                                Mode  Cnt         Score        Error  Units
+IdGeneratorPerfTest.testFullUUIDKey     thrpt   10   3211119.874 ±  41376.576  ops/s
+IdGeneratorPerfTest.testRandomId        thrpt   10  54295119.685 ± 157611.607  ops/s
+IdGeneratorPerfTest.testSecureRandomId  thrpt   10   4681608.075 ± 125908.295  ops/s
+IdGeneratorPerfTest.testShortId         thrpt   10   3061790.848 ±  40242.185  ops/s
+IdGeneratorPerfTest.testShortedUUIDKey  thrpt   10   3162643.608 ±  45634.365  ops/s
 ```
 
 #### Put elements into HashMap
