@@ -1,6 +1,5 @@
 package org.gangel.playground.identifiers;
 
-import org.gangel.playground.performance.IdGenerator;
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.BenchmarkMode;
 import org.openjdk.jmh.annotations.Measurement;
